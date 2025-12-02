@@ -1,0 +1,5 @@
+The client and server each generate 2048-bit RSA key pairs and exchange their public keys through trusted files.
+The client prompts the user for a message,encrypts it using the server’s public key with RSA-OAEP and SHA-256 for confidentiality,
+and signs the plaintext with its own private key using RSA-PSS and SHA-256 forauthentication and integrity.
+The client then sends both the encrypted message and the digital signature to the server over a local TCP connection.
+The server decrypts the ciphertext with its private key, verifies the signature using the client’s public key, and displays the original message if verification succeeds.
