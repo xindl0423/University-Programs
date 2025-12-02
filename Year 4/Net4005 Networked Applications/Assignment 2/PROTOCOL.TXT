@@ -1,0 +1,3 @@
+This RMI-based seat reservation system uses a simple remote method invocation protocol where clients call synchronized methods on a server object to manage airline seat reservations. 
+The protocol supports three main operations: listing available seats, reserving seats for passengers, and retrieving the complete passenger list. 
+All communication happens through string-based requests and responses, with the server maintaining synchronized state for seat availability and passenger assignments.
